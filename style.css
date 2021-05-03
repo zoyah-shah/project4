@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: input-serif, serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.container {
+  color: #97eb8f;
+}
+
+.canvas-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.p5_loading {
+  background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.p5_loading__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+}
+
+.p5_loading__inner span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: rgb(255, 255, 255);
+  margin: 0 20px;
+  transform-origin: center;
+}
+
+
+#uploading-animation {
+  display: none;
+}
+
+#uploading-animation.is-visible {
+  display: block;
+}
+
+.upload-btn::before,
+.toggle-btn {
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: currentColor;
+  position: absolute;
+  bottom: 2vmax;
+  /* border: 1px solid; */
+  width: 255px;
+  color: #97eb8f;
+  /* background-color: rgba(255, 255, 255, 0.336); */
+}
+
+.upload-btn::before {
+  content: "Upload your track";
+  font-family: input-serif, serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+  display: inline-block;
+  left: 42.5vw;
+  top: 31vh;
+  bottom: 39rem;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  background: none;
+  outline: none;
+  left: 43vw;
+  font-family: input-serif, serif;
+  font-weight: 400;
+  font-style: normal;
+  bottom: 31vh;
+  color: #97eb8f;
+  /* background-color: rgba(255, 255, 255, 0.336); */
+  border: none;
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+.toggle-btn:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 55em) {
+
+  .codrops-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .demos {
+    width: 100%;
+    margin: 1em 0 0;
+    text-align: center;
+  }
+  .toggle-btn {
+    left: 0vw;
+    bottom: 30vh;
+    width: calc(100% - 20px);
+  }
+  .upload-btn::before {
+    position: absolute;
+    bottom: 9em;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+}
