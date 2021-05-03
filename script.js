@@ -1,16 +1,12 @@
-
 var pieces, radius, fft, analyzer, mapMouseX, mapMouseY, audio, toggleBtn, uploadBtn, uploadedAudio, uploadAnim;
 var colorPalette = ["#2b2b2b", "#86dba7", "#fcf917", "#d363ff", "#fcf917"];
 var uploadLoading = false;
 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 var randomColorTwo = '#'+Math.floor(Math.random()*16777217).toString(16);
 
-/*=============================================
-	SETUP
-=============================================*/
 
 function preload() {
-    audio = loadSound("audio/Crumb - Plants.mp3"); 
+    audio = loadSound("Crumb - Plants.mp3"); 
 }
 
 function uploaded(file) {
@@ -56,9 +52,7 @@ function setup() {
 
 
 
-/*=============================================
-	DRAW
-=============================================*/
+
 function draw() {
 
     // Add a loading animation for the uploaded track
