@@ -116,25 +116,6 @@ function draw() {
             pop();
         }
 
-
-        /*----------  MID  ----------*/
-        // for (var m = 0; m < mid; m += 20) {
-
-        //     var _mapScale = map(b, 20, mid, 10, 8);
-        //     push();
-        //     noFill();
-        //     // stroke(colorPalette[2]);
-        //     stroke(randomColorTwo);
-        //     // rotate(frameCount);
-        //     ellipse(50, 50, 60, 60);
-        //     strokeWeight(_mapScale * 2);
-        //     bezier(_mapBassX - b, 300, 1, 6, 6, 55, 10);
-        //     pop();
-
-        // }
-
-
-
        
     }
 
