@@ -1,4 +1,4 @@
-var pieces, radius, fft, analyzer, mapMouseX, mapMouseY, audio, toggleBtn, uploadBtn, uploadedAudio, uploadAnim, preload;
+var pieces, radius, fft, analyzer, mapMouseX, mapMouseY, audio, toggleBtn, uploadBtn, uploadedAudio, uploadAnim;
 var colorPalette = ["#2b2b2b", "#86dba7", "#fcf917", "#d363ff", "#fcf917"];
 var uploadLoading = false;
 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
