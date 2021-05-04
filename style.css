@@ -107,6 +107,7 @@ canvas {
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
+  /* display: none; */
 }
 
 .toggle-btn {

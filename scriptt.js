@@ -41,6 +41,7 @@ function setup() {
     uploadBtn = createFileInput(uploaded);
 
     uploadBtn.addClass("upload-btn");
+    uploadBtn.style.display = "none";
     
     toggleBtn.addClass("toggle-btn");
 
