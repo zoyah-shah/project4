@@ -37,7 +37,7 @@ canvas {
   height: 100%;
 }
 
-.p5_loading {
+/* .p5_loading {
   background: black;
   position: fixed;
   left: 0;
@@ -66,16 +66,34 @@ canvas {
   background: rgb(255, 255, 255);
   margin: 0 20px;
   transform-origin: center;
-}
+} */
 
 
-#uploading-animation {
+/* #uploading-animation {
   display: none;
+} */
+input[type="file" i] {
+  appearance: initial;
+  background-color: initial;
+  cursor: default;
+  align-items: baseline;
+  color: inherit;
+  text-overflow: ellipsis;
+  white-space: pre;
+  text-align: start !important;
+  padding: initial;
+  border: initial;
+  overflow: hidden !important;
 }
 
-#uploading-animation.is-visible {
+/* #uploading-animation.is-visible {
   display: block;
-}
+} */
+
+
+/* input.upload-btn::after{
+  display: none;
+} */
 
 .upload-btn::before,
 .toggle-btn {
