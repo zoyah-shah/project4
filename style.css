@@ -72,28 +72,16 @@ canvas {
 /* #uploading-animation {
   display: none;
 } */
-input[type="file" i] {
-  appearance: initial;
-  background-color: initial;
-  cursor: default;
-  align-items: baseline;
-  color: inherit;
-  text-overflow: ellipsis;
-  white-space: pre;
-  text-align: start !important;
-  padding: initial;
-  border: initial;
-  overflow: hidden !important;
-}
+
 
 /* #uploading-animation.is-visible {
   display: block;
 } */
 
 
-/* input.upload-btn::after{
+input.upload-btn::after{
   display: none;
-} */
+}
 
 .upload-btn::before,
 .toggle-btn {
@@ -113,9 +101,7 @@ input[type="file" i] {
 .upload-btn::before {
   content: "Upload your track";
   font-family: input-serif, serif;
-
   font-weight: 400;
-
   font-style: normal;
   display: inline-block;
   left: 42.5vw;
@@ -126,6 +112,10 @@ input[type="file" i] {
   -webkit-user-select: none;
   cursor: pointer;
   /* display: none; */
+}
+
+.upload-btn::before:hover{
+  color: white;
 }
 
 .toggle-btn {
@@ -141,9 +131,9 @@ input[type="file" i] {
   border: none;
 }
 
-.toggle-btn:focus {
+/* .toggle-btn:focus {
   outline: none;
-}
+} */
 
 .toggle-btn:hover {
   color: #fff;
@@ -151,15 +141,6 @@ input[type="file" i] {
 
 @media screen and (max-width: 55em) {
 
-  .codrops-header {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .demos {
-    width: 100%;
-    margin: 1em 0 0;
-    text-align: center;
-  }
   .toggle-btn {
     left: 0vw;
     bottom: 30vh;
