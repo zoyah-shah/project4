@@ -3,6 +3,7 @@
 var pieces, radius, fft, analyzer, mapMouseX, mapMouseY, audio, toggleBtn, uploadBtn, uploadedAudio, uploadAnim;
 var colorPalette = ["#2b2b2b", "#86dba7", "#fcf917", "#d363ff", "#fcf917"];
 var uploadLoading = false;
+// random color generator when refreshed
 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 var randomColorTwo = '#'+Math.floor(Math.random()*16777217).toString(16);
 
@@ -43,10 +44,11 @@ function setup() {
     uploadBtn.addClass("upload-btn");
     uploadBtn.style.display = "none";
     
-    toggleBtn.addClass("toggle-btn");
+    toggleBtn.addClass("pause-btn");
 
     toggleBtn.mousePressed(toggleAudio);
 
+    // analyze audio for frequency
     analyzer = new p5.Amplitude();
     fft = new p5.FFT();
     audio.loop();
@@ -58,13 +60,7 @@ function setup() {
 
 function draw() {
 
-    // Add a loading animation for the uploaded track
-    // -----------------------------------------------
-    if (uploadLoading) {
-        uploadAnim.addClass('is-visible');
-    } else {
-        uploadAnim.removeClass('is-visible');
-    }
+
 
     background("#000000");
     translate(windowWidth / 2, windowHeight / 2);
@@ -88,7 +84,6 @@ function draw() {
             stroke(randomColor);
             // stroke is purple (3)
             rotate(b);
-            // rotate(b * frameCount);
             ellipse(80, 40, 80, 50);
             // applyMatrix(1 / step, 0, 0, 1 / step, 0, 0);
             strokeWeight(_mapScale * 2);
@@ -98,7 +93,7 @@ function draw() {
         }
     } else {
 
-        /*----------  BASS  ----------*/
+        // bass/frequency
         var _mapBassX = map(mouseX, 0, width, 400, 1200);
         for (var b = 0; b < bass; b++) {
             var _mapScale = map(b, 0, bass, 0, 1);
@@ -109,7 +104,6 @@ function draw() {
             stroke(randomColor);
             // stroke is purple (3)
             rotate(b);
-            // rotate(b * frameCount);
             ellipse(80, 40, 80, 50);
             // applyMatrix(1 / step, 0, 0, 1 / step, 0, 0);
             strokeWeight(_mapScale * 2);
